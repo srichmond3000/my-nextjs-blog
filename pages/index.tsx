@@ -51,8 +51,6 @@ const PostTitle = styled.h2`
 export default function Home({
   posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(posts);
-
   return (
     <Container>
       <Head>
@@ -75,7 +73,7 @@ export default function Home({
   );
 }
 
-type Post = {
+export type Post = {
   userId: number;
   id: number;
   title: string;
