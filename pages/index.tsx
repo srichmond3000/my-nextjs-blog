@@ -67,9 +67,11 @@ export default function Home({
         </Link>
         <List>
           {posts.map((post) => (
-            <ListItem key={post.id}>
-              <PostTitle>{post.title}</PostTitle>
-            </ListItem>
+            <Link href='/posts/[id]' as={`/posts/${post.id}`}>
+              <ListItem key={post.id}>
+                <PostTitle>{post.title}</PostTitle>
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Main>
